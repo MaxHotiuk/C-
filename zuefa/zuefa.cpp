@@ -4,8 +4,7 @@ using namespace std;
 
 int main()
 {
-    char var1, var2;
-    string des;
+    char var1, var2, des;
     int indx = rand() % 3;
     char chsArr[3] = {'s', 'r', 'p'};
 
@@ -23,6 +22,10 @@ int main()
             else if (var1 == 'p'){
                 cout << "You lose... Scissors beat paper" << endl;
             }
+            else if (var1 == 's'){
+                cout << "It's a tie!" << endl;
+            }
+            break;
         case 'p':
             if (var1 == 'r'){
                 cout << "You lose... Paper beats rock" << endl;
@@ -30,6 +33,10 @@ int main()
             else if (var1 == 's'){
                 cout << "You won! Scissors beat paper" << endl;
             }
+            else if (var1 == 'p'){
+                cout << "It's a tie!" << endl;
+            }
+            break;
         case 'r':
             if (var1 == 's'){
                 cout << "You lose... Rock beats scissors" << endl;
@@ -37,21 +44,22 @@ int main()
             else if (var1 == 'p'){
                 cout << "You won! Paper beats rock" << endl;
             }
+            else if (var1 == 'r'){
+                cout << "It's a tie!" << endl;
+            }
+            break;
         default:
-            cout << "You put something wrong" << endl;
+           cout << "You put something wrong" << endl;
     }
-    if (var1 == var2){
-        cout << "It's a tie!" << endl;
-    }
+    
 
-    cout << "Wanna play again?(yes or no)" << endl;
+    cout << "Wanna play again?(y or n)" << endl;
     cin >> des; 
-
-    if (des == "yes"){
-        main();
-    }
-    else {
-        cout << "You put something wrong" << endl;
+    switch (des){
+        case 'y':
+            main();
+        default:
+            break;
     }
 
     return 0;
