@@ -14,35 +14,29 @@ int main()
 
     var2 = chsArr[indx];
 
-    if (var1 == 'r' && var2 == 's'){
-        cout << "You won! Rock beats scissors" << endl;
-    }
-    else if (var1 == 'r' && var2 == 'r'){
-        cout << "It's a tie!" << endl;
-    }
-    else if (var1 == 'r' && var2 == 'p'){
-        cout << "You lose... Paper beats rock" << endl;
-    }
-    else if (var1 == 'p' && var2 == 's'){
-        cout << "You lose... Scissors beat paper" << endl;
-    }
-    else if (var1 == 'p' && var2 == 'r'){
-        cout << "You won! Paper beats rock" << endl;
-    }
-    else if (var1 == 'p' && var2 == 'p'){
-        cout << "It's a tie!" << endl;
-    }
-    else if (var1 == 's' && var2 == 's'){
-        cout << "It's a tie!" << endl;
-    }
-    else if (var1 == 's' && var2 == 'r'){
-        cout << "You lose... Rock beats scissors" << endl;
-    }
-    else if (var1 == 's' && var2 == 'p'){
-        cout << "You won! Scissors beat paper" << endl;
-    }
-    else{
-        cout << "You put something wrong";
+    switch (var2)
+    {
+        case 's':
+            if (var1 == 'r'){
+                cout << "You won! Rock beats scissors" << endl;
+            }
+            else if (var1 == 'p'){
+                cout << "You lose... Scissors beat paper" << endl;
+            }
+        case 'p':
+            if (var1 == 'r'){
+                cout << "You lose... Paper beats rock" << endl;
+            }
+            else if (var1 == 's'){
+                cout << "You won! Scissors beat paper" << endl;
+            }
+        case 'r':
+            if (var1 == 's'){
+                cout << "You lose... Rock beats scissors" << endl;
+            }
+            else if (var1 == 'p'){
+                cout << "You won! Paper beats rock" << endl;
+            }
     }
 
     cout << "Wanna play again?(yes or no)" << endl;
@@ -50,6 +44,9 @@ int main()
 
     if (des == "yes"){
         main();
+    }
+    else {
+        cout << "You put something wrong" << endl;
     }
 
     return 0;
