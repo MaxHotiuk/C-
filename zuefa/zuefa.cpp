@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 int main()
@@ -52,7 +51,6 @@ int main()
            cout << "You put something wrong" << endl;
     }
     
-
     cout << "Wanna play again?(y or n)" << endl;
     cin >> des; 
     switch (des){
