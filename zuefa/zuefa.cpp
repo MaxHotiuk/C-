@@ -37,6 +37,11 @@ int main()
             else if (var1 == 'p'){
                 cout << "You won! Paper beats rock" << endl;
             }
+        default:
+            cout << "You put something wrong" << endl;
+    }
+    if (var1 == var2){
+        cout << "It's a tie!" << endl;
     }
 
     cout << "Wanna play again?(yes or no)" << endl;
