@@ -16,7 +16,11 @@ int main()
     cin >> b2;
     cout << "Input c2: ";
     cin >> c2;
+
     y = (c2 - ((a2 * c1) / a1)) / (b2 - ((a2 * b1) / a1));
     x = (c1 - b1 * y) / a1;
+
     cout << "x = " << x << endl << "y = " << y << endl;
+
+    return 0;
 }
