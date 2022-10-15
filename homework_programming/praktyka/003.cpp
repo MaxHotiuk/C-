@@ -5,7 +5,8 @@ using namespace std;
 
 double x1, y, x2, y2, x3, y3, a, b, c, len1, len2;
 
-void countLenth(){
+void countLenth()
+{
     if (x1 != 0 || y != 0){
         a = sqrt(pow(x1, 2) + pow(y, 2));
     } else {
@@ -25,25 +26,8 @@ void countLenth(){
     }
 }
 
-int main()
+void outClosest()
 {
-    cout << "Enter coordinates x, y for point a: \n";
-    cin >> x1;
-    cin >> y;
-    cout << endl;
-
-    cout << "Enter coordinates x, y for point b: \n";
-    cin >> x2;
-    cin >> y2;
-    cout << endl;
-
-    cout << "Enter coordinates x, y for point c: \n";
-    cin >> x3;
-    cin >> y3;
-    cout << endl;
-
-    countLenth();
-
     if (a == b && b == c){
         cout << "Their farth is the same\n";
     } else if (a == b){
@@ -75,6 +59,28 @@ int main()
             cout << "C is the closest\n";
         }
     }
+}
+
+int main()
+{
+    cout << "Enter coordinates x, y for point a: \n";
+    cin >> x1;
+    cin >> y;
+    cout << endl;
+
+    cout << "Enter coordinates x, y for point b: \n";
+    cin >> x2;
+    cin >> y2;
+    cout << endl;
+
+    cout << "Enter coordinates x, y for point c: \n";
+    cin >> x3;
+    cin >> y3;
+    cout << endl;
+
+    countLenth();
+
+    outClosest();
 
     return 0;
 }
