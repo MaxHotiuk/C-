@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
     double x, p, z1, z2;
+    
     cout << "Variable: ";
     cin >> x;
 
