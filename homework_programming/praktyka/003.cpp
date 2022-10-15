@@ -79,7 +79,6 @@ int main()
     cout << endl;
 
     countLenth();
-
     outClosest();
 
     return 0;
