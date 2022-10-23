@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    double a, b, h, x, s, f;
+    double a, b, h, s, f;
     int e = 0;
     cout << "Input a\n";
     cin >> a;
@@ -15,16 +15,15 @@ int main()
     cin >> h;
 
     while (a <= b){
-        x = a;
         a += h;
-        f = 2 * sin(x);
+        f = 2 * sin(a);
         cout << f << endl;
         if (f < 1.5 && f > 0.5){
             s += f;
             e += 1;
         }
     }
-    cout << "Middle: " << s / e << endl;
+    
 
     return 0;
 }
