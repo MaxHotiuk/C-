@@ -28,7 +28,24 @@ void countLenth()
 
 void outClosest()
 {
-    if (a == b && b == c){
+    if (a == 0 && c == 0){
+        if (a == 0 && c == 0){
+            cout << "A, B and C are the start";
+        }
+    } else if (a == 0 && b == 0){
+        cout << "A and B are the start";
+    } else if (b == 0 && c == 0){
+        cout << "B and C are the start";
+    } else if (a == 0 && c == 0){
+        cout << "A and C are the start";
+    } else if (a == 0){
+        cout << "A is the start";
+    } else if (b == 0){
+        cout << "B is the start";
+    } else if (c == 0){
+        cout << "C is the start";
+    }
+    else if (a == b && b == c){
         cout << "Their farth is the same\n";
     } else if (a == b){
         if (a > c){
