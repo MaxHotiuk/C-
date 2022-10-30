@@ -17,7 +17,7 @@ int main()
         double sum = 0;
         for (int k = 0;; k++)
         {
-        double n = 1;
+            double n = 1;
             for (int i = 1; i <= (2 * k + 1); i++){
                 n *= i;
             }
