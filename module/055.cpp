@@ -19,7 +19,7 @@ void first()
 
     double x = a;
 
-    while (x < b + h)
+    while (x <= b)
     {
         double sum = 0;
         for (int k = 0;; k++)
