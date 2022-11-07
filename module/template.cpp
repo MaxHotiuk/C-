@@ -17,12 +17,12 @@ void first()
 
 void second()
 {
-
+    
 }
 
 void third()
 {
-
+    
 }
 
 int main()
