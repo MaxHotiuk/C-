@@ -47,27 +47,14 @@ void second()
     cout << "Input e: ";
     cin >> e;
     ann = a1;
-    for (int n = 2;; n++)
+    double an = 3 + ann / pow(2, 2);
+    int n = 2;
+    cout << endl << a1;
+    while (abs(an - ann) < e)
     {
         double an = 3 + ann / pow(2, n);
-
-        if (abs(an - ann) < e)
-        {
-            indx = n;
-            cout << "Index of n elem = " << indx << endl;
-            ann = a1;
-            break;
-        }
-        else 
-        {
-            ann = an;
-        }
-    }
-    cout << a1 << " ";
-    for (int n = 2; n <= indx; n++)
-    {
-        double an = 3 + ann / pow(2, n);
-        ann = an;
+        
+        n++;
         cout << an << " ";
     }
     cout << endl;
