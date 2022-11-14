@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     ifstream inFile;
-    string line, save;
+    string line;
     int n = 1;
 
     inFile.open("text.txt");
@@ -25,6 +25,18 @@ int main()
     inFile.close();
 
     inFile.open("text.txt");
-    string str;
+
+    line.erase(line.begin());
+
+    for (int i = 0; i < n; i++)
+    {
+        if (line[i] == ' ')
+        {
+            line.erase(line.begin() + i + 1);
+        }
+    }
+
     inFile.close();
+
+    cout << line << endl;
 }
