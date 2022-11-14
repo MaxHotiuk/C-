@@ -68,7 +68,7 @@ void third()
     cout << "Input n: ";
     cin >> n;
     int indx = 0;
-    double **arr = new double*[n], summ;
+    double **arr = new double*[n], summ = 0;
     for(int x = 0; x < n; x++)
     {
         arr[x] = new double[n];
@@ -87,6 +87,7 @@ void third()
     {
         summ += arr[0][j];
     }
+    
     
     for (size_t i = 0; i < n; i++)
     {
