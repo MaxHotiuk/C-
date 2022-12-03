@@ -122,5 +122,7 @@ string intToRoman(int numb) {
 
 int main()
 {
-    cout << endl << intToRoman(1889) << endl;
+    int a;
+    cin >> a;
+    cout << endl << intToRoman(a) << endl;
 }

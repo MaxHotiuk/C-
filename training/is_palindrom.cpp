@@ -1,30 +1,19 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-bool isPalindrome(int x) 
+bool is_pal_str(string x)
 {
-    int z = x;
     string y;
-    if (x > 0)
+    for (int i = x.length() - 1; i >= 0; i--)
     {
-        while (z != 0)
-        {
-            y += to_string(z % 10);
-            z /= 10;
-        }
-        
-        string f = to_string(x);
-        if (y == f)
-        {
-            return true;
-        } else return false;
-    } else if (x == 0)return true;
-    else return false;
-    
+        y += x[i];
+    }
+    return x == y;
 }
 
 int main()
 {
-    cout << isPalindrome(1234567899);
+    string y;
+    cin >> y;
+    cout << is_pal_str(y);
 }
