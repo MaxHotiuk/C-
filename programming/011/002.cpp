@@ -198,6 +198,7 @@ int main()
     }
 
     sortPass(arr, n);
+    
     for (int i = 0; i < half; i++)
     {
         cout << i + 1 << ") " << arr[i] << endl;
