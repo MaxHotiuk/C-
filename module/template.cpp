@@ -6,7 +6,7 @@ int task;
 
 void choose()
 {
-    cout << "Choose the task{1, 2, 3}(if anything else - end): ";
+    cout << "Choose the task (1, 2, 3)\nP.S if anything else - end: ";
     cin >> task;
     cout << endl;
 }
@@ -28,10 +28,10 @@ void third()
 int main()
 {
     string iif;
-    cout << "Want to choose the task?(yes if true or anything else if false) ";
+    cout << "Choose the task?(y if true) ";
         cin >> iif;
         cout << endl;
-    while (iif == "yes")
+    while (iif == "y")
     {
         choose();
         
@@ -50,7 +50,7 @@ int main()
             break;
         }
 
-        cout << "Want to choose the task?(yes if true or anything else if false) ";
+        cout << "Choose the task?(y if true) ";
         cin >> iif;
         cout << endl;
     }

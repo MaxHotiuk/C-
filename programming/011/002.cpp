@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include<limits>
 
 using namespace std;
 
@@ -119,6 +118,12 @@ public:
         }
     }
 
+    Passenger operator += (int num)
+    {
+        cost += num;
+        return *this;
+    }
+
     void mostExp(Passenger *arr, int n, int &cst)
     {
         for (int p = 0; p < n; p++)
@@ -181,7 +186,6 @@ int main()
     string line, punct;
     Passenger a;
     fstream in;
-
     in.open ("in.txt");
     while (getline(in, line)) n++;
     in.close();
@@ -198,7 +202,7 @@ int main()
     }
 
     sortPass(arr, n);
-    
+
     for (int i = 0; i < half; i++)
     {
         cout << i + 1 << ") " << arr[i] << endl;
@@ -213,5 +217,9 @@ int main()
     cout << "Zahalna summa do zjogo punkty: " << zah << endl;
     arr[0].kilc(arr, half);
 
+    cout << arr[0] << endl;
+    arr[0] += 100;
+    cout << arr[0] << endl;
+
     in.close();
-}
+    }

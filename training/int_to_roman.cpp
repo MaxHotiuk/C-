@@ -13,108 +13,130 @@ string intToRoman(int numb) {
 
     for (int n = tolen.length(); n > 0; n--)
     {
-        int num = (int)nws[n-1] - 48;
-        switch (n)
-        { 
-            case 4:
-                for (int i = num; i > 0; i--)
-                    {
-                        s += "M";
-                    }
-                break;
-            case 3:
-                res13:if (num > 5)
-                {
-                    if (num == 9)
-                    {
-                        s += "CM";
-                    } else
-                    {
-                        s += "D";
-                        num -= 5;
-                        goto res13;
-                    }
-                } else if (num == 5)
-                {
-                    s += "D";
-                } else
-                {
-                    if (num == 4)
-                    {
-                        s += "CD";
-                    }
-                    else
-                    {
-                        for (int i = num; i > 0; i--)
+        if (n > 4)
+        {
+            string temp;
+            for (int c = 0; c < n - 3; c++)
+            {
+                temp += tolen[c];
+            }
+            int bebra;
+            bebra = stoi(temp);
+            for (int i = 0; i < temp.length(); i++)
+            {
+                n--;
+            }
+            for (int i = bebra; i > 0; i--)
+            {
+                s += "M";
+            }
+        }
+        else
+        {
+            int num = (int)nws[n-1] - 48;
+            switch (n)
+            { 
+                case 4:
+                    for (int i = num; i > 0; i--)
                         {
-                            s += "C";
+                            s += "M";
                         }
-                    }
-                }
-                break;
-            case 2:
-                res23:if (num > 5)
-                {
-                    if (num == 9)
-                    {
-                        s += "XC";
-                    } else
-                    {
-                        s += "L";
-                        num -= 5;
-                        goto res23;
-                    }
-                } else if (num == 5)
-                {
-                    s += "L";
-                } else
-                {
-                    if (num == 4)
-                    {
-                        s += "XL";
-                    }
-                    else
-                    {
-                        for (int i = num; i > 0; i--)
-                        {
-                            s += "X";
-                        }
-                    }
-                }
-                break;
-            case 1:
-                res33:if (num > 5)
+                    break;
+                case 3:
+                    res13:if (num > 5)
                     {
                         if (num == 9)
                         {
-                            s += "IX";
+                            s += "CM";
                         } else
                         {
-                            s += "V";
+                            s += "D";
                             num -= 5;
-                            goto res33;
+                            goto res13;
                         }
                     } else if (num == 5)
                     {
-                        s += "V";
+                        s += "D";
                     } else
                     {
                         if (num == 4)
                         {
-                            s += "IV";
+                            s += "CD";
                         }
                         else
                         {
                             for (int i = num; i > 0; i--)
                             {
-                                s += "I";
+                                s += "C";
                             }
                         }
                     }
-                break;
-            default:
-                break;
+                    break;
+                case 2:
+                    res23:if (num > 5)
+                    {
+                        if (num == 9)
+                        {
+                            s += "XC";
+                        } else
+                        {
+                            s += "L";
+                            num -= 5;
+                            goto res23;
+                        }
+                    } else if (num == 5)
+                    {
+                        s += "L";
+                    } else
+                    {
+                        if (num == 4)
+                        {
+                            s += "XL";
+                        }
+                        else
+                        {
+                            for (int i = num; i > 0; i--)
+                            {
+                                s += "X";
+                            }
+                        }
+                    }
+                    break;
+                case 1:
+                    res33:if (num > 5)
+                        {
+                            if (num == 9)
+                            {
+                                s += "IX";
+                            } else
+                            {
+                                s += "V";
+                                num -= 5;
+                                goto res33;
+                            }
+                        } else if (num == 5)
+                        {
+                            s += "V";
+                        } else
+                        {
+                            if (num == 4)
+                            {
+                                s += "IV";
+                            }
+                            else
+                            {
+                                for (int i = num; i > 0; i--)
+                                {
+                                    s += "I";
+                                }
+                            }
+                        }
+                    break;
+                default:
+                    break;
+            }
         }
+        
     }
     
     return s;

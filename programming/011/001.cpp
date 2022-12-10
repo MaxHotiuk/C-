@@ -113,6 +113,12 @@ public:
         RationalNum(a + b, b);
         return *this;
     }
+    RationalNum operator += (int num)
+    {
+        RationalNum rem(*this);
+        *this = rem;
+        return *this;
+    }
 };
 
 int main()
@@ -125,6 +131,7 @@ int main()
     if (number.correct() == true && number2.correct() == true) cout << number + number2 << endl;
     else cout << endl << "Number is not rational." << endl;
     cout << (number > number2) << endl;
-    cout << (--number) << endl;
+    cout << (number) << endl;
+    ++number;
     cout << (number) << endl;
 }
